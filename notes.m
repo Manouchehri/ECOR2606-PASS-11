@@ -48,4 +48,10 @@ fprintf('The solution is %f.\n', a2);
 
 end
 
+function [] = p4()
+
+x = [1 5.6667 10.3333 15];
+y = [1 8       4      11];
+
+end
 
