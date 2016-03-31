@@ -5,6 +5,7 @@ function [] = notes()
 p1();
 p2();
 p3();
+p4();
 
 end
 
@@ -80,6 +81,10 @@ function [] = p4()
 
 x = [1 5.6667 10.3333 15];
 y = [1 8       4      11];
+
+xp = linspace(x(1), x(end));
+yp = spline(x, y, xp);
+plot(xp, yp, x, y, 'xr');
 
 end
 
