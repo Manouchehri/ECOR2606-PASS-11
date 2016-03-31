@@ -4,6 +4,7 @@ function [] = notes()
 
 p1();
 p2();
+p3();
 
 end
 
@@ -45,6 +46,33 @@ fprintf('The solution is %f.\n', a1);
 a2 = h/3 * (y(1) + 4*y(2) + 2*y(3) + 4*y(4) + y(5));
 
 fprintf('The solution is %f.\n', a2);
+
+end
+
+function [] = p3()
+
+% Evaluate 3x^2 + x^3 + 2 from -1 to +1 using Gaussian Quadrature
+
+% n = 3 <= 3
+% 2 point Gaussian Quadrature
+
+% n <= 5
+% 3 point Gaussian Quadrature
+
+% n  <= 7
+% 4 point Gaussian Quadrature
+
+% We can use the first one here. Check the slides for a reminder on how
+% this works.
+
+% I = C0 * f(x0) + C1 - f(x1)
+% I = 1 * f(-0.57735) + 1 * f(0.57735)
+% I = 2.8075 + 3.1924
+
+f = @(x) 3*x^2 + x^3 + 2;
+
+a = 1 * f(-0.57735) + 1 * f(0.57735);
+fprintf('The solution is %f.\n', a);
 
 end
 
