@@ -1,4 +1,5 @@
-% Week 11
+% Written by David Manouchehri
+% ECOR2606 - PASS - Week 11
 
 function [] = notes() 
 
@@ -16,9 +17,9 @@ function [] = p1()
 T = [0 30 60 90 120]; % Time (s)
 V = [5 10 15 20 17 ]; % Velocity (m/s)
 
-% will be using trapz since we have data points.
+% We will be using trapz since we have data points.
 
-Q = trapz(V, T); % Pay attention to the order!
+Q = trapz(V, T); % Pay attention to the order!.
 
 fprintf('It traveled %f meters.\n', Q);
 
@@ -54,17 +55,7 @@ function [] = p3()
 
 % Evaluate 3x^2 + x^3 + 2 from -1 to +1 using Gaussian Quadrature
 
-% n = 3 <= 3
-% 2 point Gaussian Quadrature
-
-% n <= 5
-% 3 point Gaussian Quadrature
-
-% n  <= 7
-% 4 point Gaussian Quadrature
-
-% We can use the first one here. Check the slides for a reminder on how
-% this works.
+% We use 2 point Gaussian Quadrature since n <= 3.
 
 % I = C0 * f(x0) + C1 - f(x1)
 % I = 1 * f(-0.57735) + 1 * f(0.57735)
@@ -87,4 +78,3 @@ yp = spline(x, y, xp);
 plot(xp, yp, x, y, 'xr');
 
 end
-
