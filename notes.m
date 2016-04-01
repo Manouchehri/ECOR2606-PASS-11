@@ -1,5 +1,6 @@
 % Written by David Manouchehri
 % ECOR2606 - PASS - Week 11
+% https://carleton.ca/passworkshops/wp-content/uploads/ECOR-2606-DE-Week-11-1.pdf
 
 function [] = notes() 
 
